@@ -2,13 +2,25 @@
 <html lang="en">
 <head>
     <title>Javascript Date Time Picker Demo Page</title>
-    <script src="datetimepicker_css.js"></script>
+    <script src="datetimepicker_css_customized.js"></script>
+    <style type="text/css">
+        .example { display: flex; margin: 50px; }
+    </style>
 </head>
 <body>
-    <div style="text-align:center; margin:150px auto 100px auto;">
-        <label for="demo1">Please enter a date here &gt;&gt; </label>
+    <div class="example">
         <input type="Text" id="demo1" maxlength="25" size="25"/>
-        <img src="images2/cal.gif" onclick="javascript:NewCssCal('demo1')" style="cursor:pointer"/>
+        <img src="images2/cal.gif" onclick="showdatetime();"/>
+    </div>
+    <div class="example">
+        <input type="Text" id="demo2" maxlength="25" size="25"/>
+        <img src="images2/cal.gif" onclick=""/>
     </div>
 </body>
 </html>
+<script>
+    function showdatetime()
+    {
+        NewCssCal('demo1','','arrow',true,12,false,'future');
+    }
+</script>

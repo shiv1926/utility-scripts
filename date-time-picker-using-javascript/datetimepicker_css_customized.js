@@ -691,9 +691,26 @@ function RenderCssCal(bNewCal) {
 			vCalTime += "<td style='vertical-align:middle;'><table cellspacing='0' cellpadding='0' style='line-height:0pt;width:100%;'><tr><td style='text-align:center;'><img onclick='nextStep(\"Hour\", \"plus\");' onmousedown='startSpin(\"Hour\", \"plus\");' onmouseup='stopSpin();' src='" + imageFilesPath + "cal_plus.gif' width='13px' height='9px' onmouseover='changeBorder(this, 0)' onmouseout='changeBorder(this, 1)' style='border:1px solid white'></td></tr><tr><td style='text-align:center;'><img onclick='nextStep(\"Hour\", \"minus\");' onmousedown='startSpin(\"Hour\", \"minus\");' onmouseup='stopSpin();' src='" + imageFilesPath + "cal_minus.gif' width='13px' height='9px' onmouseover='changeBorder(this, 0)' onmouseout='changeBorder(this, 1)' style='border:1px solid white'></td></tr></table></td>\n";
 		}
 
-		vCalTime += "<td width='22px'><input type='text' name='hour' maxlength=2 size=1 style=\"WIDTH:22px\" value=" + showHour + " onkeyup=\"javascript:Cal.SetHour(this.value)\">";
-		vCalTime += "</td><td style='font-weight:bold;text-align:center;'>:</td><td width='22px'>";
-		vCalTime += "<input type='text' name='minute' maxlength=2 size=1 style=\"WIDTH: 22px\" value=" + Cal.Minutes + " onkeyup=\"javascript:Cal.SetMinute(this.value)\">";
+		vCalTime += '<td>';
+		vCalTime += '<select name="hour" onChange="javascript:Cal.SetHour(this.value);">';
+		for (i = 1; i <= TimeMode; i++) {
+			if (i <= 9) {
+				i = '' + i;
+			}
+			vCalTime += '<option value="' + i + '">' + i + '</option>';
+		}
+		vCalTime += "</select>";
+		vCalTime += "</td>";
+
+		vCalTime += "<td style='font-weight:bold;text-align:center;'>:</td><td width='22px'>";
+		vCalTime += '<select name="minute" onChange="javascript:Cal.SetMinute(this.value);">';
+		for (i = 1; i <= 60; i++) {
+			if (i <= 9) {
+				i = '' + i;
+			}
+			vCalTime += '<option value="' + i + '">' + i + '</option>';
+		}
+		vCalTime += "</select>";
 
 		if (Cal.ShowSeconds) {
 			vCalTime += "</td><td style='font-weight:bold;'>:</td><td width='22px'>";
