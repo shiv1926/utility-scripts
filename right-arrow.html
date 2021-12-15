@@ -1,0 +1,21 @@
+<style>
+#arrowAnim { display: inline-flex; justify-content: flex-start; align-items: center; position: relative; }
+.arrowSliding { position: absolute; -webkit-animation: slide 4s linear infinite; animation: slide 4s linear infinite; }
+.arrow { width: 6px; height: 6px; border: 2px solid; border-color: black transparent transparent black; transform: rotate(135deg); display: inline-block; }
+.delay1 { -webkit-animation-delay: 1s; animation-delay: 1s; }
+.delay2 { -webkit-animation-delay: 2s; animation-delay: 2s; }
+.delay3 { -webkit-animation-delay: 3s; animation-delay: 3s; }
+ @keyframes slide {
+  0% { opacity:0; transform: translateX(-15px); }  
+  20% { opacity:1; transform: translateX(-5px); } 
+  50% { opacity:1; transform: translateX(5px); }  
+  80% { opacity:1; transform: translateX(15px); }  
+  100% { opacity:0; transform: translateX(25px); } 
+}  
+</style>
+<div id="arrowAnim">
+  <div class="arrowSliding"><div class="arrow"></div></div>
+  <div class="arrowSliding delay1"><div class="arrow"></div></div>
+  <div class="arrowSliding delay2"><div class="arrow"></div></div>
+  <div class="arrowSliding delay3"><div class="arrow"></div></div>
+</div>
