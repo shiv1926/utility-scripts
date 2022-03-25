@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Test</title>
+        <style type="text/css">
+.marquee_css { width: 450px; line-height: 50px; background-color: red; color: white; white-space: nowrap; overflow: hidden; box-sizing: border-box; }
+.marquee_css .marquee_item { display: inline-block; padding-left: 100%; animation: marquee 15s linear infinite; }
+@keyframes marquee {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-100%, 0); }
+}
+        </style>
+    </head>
+<body>
+<div class="marquee_css">
+  <div class="marquee_item">Test 1</div>
+  <div class="marquee_item">Test 2</div>
+  <div class="marquee_item">Test 3</div>
+</div>
+</body>
+</html>

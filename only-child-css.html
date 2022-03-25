@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Test</title>
+        <style type="text/css">
+        .ulparent li:only-child { color: red; }
+        .ulparent li { color: blue; }
+        </style>
+    </head>
+<body>
+    <ul class="ulparent">
+    	<li>only one element</li>
+    </ul>
+    =====================
+    <ul class="ulparent">
+    	<li>first element</li>
+    	<li>second element</li>
+    	<li>
+    		second element
+    		<ul></ul>
+    	</li>
+    	<li>second element</li>
+    	<li>second element</li>
+    </ul>
+</body>
+</html>

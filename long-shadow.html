@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>CSS: different dividing lines</title>
+<style type="text/css" media="screen">
+body { background: #222; color: #fff; }
+#my-box { background: #0a8; width: 300px; height: 200px; margin: 30px; position: relative; overflow: hidden; }
+#my-inner-box { position: absolute; z-index: 2; top: 50%; left: 50%; width: 100px; height: 100px; margin: -50px 0 0 -50px;
+	background: #fff; }
+.shadow { position: relative; }
+.shadow::before,
+.shadow::after {
+background-color: rgba(0,0,0,0.5); /* Color */
+width: 100px; height: 100px; /* Depth */
+position: absolute;
+content: ""; z-index: 0;
+transform-origin: top left;
+}
+.shadow::before {
+height: 100%; left: 100%;
+transform: skewY(45deg);
+background: rgba(0,0,0,0.3);
+}
+.shadow::after {
+width: 100%; top: 100%;
+transform: skewX(45deg);
+background: rgba(0,0,0,0.3);
+}
+
+</style>
+</head>
+<body>
+<div id="my-box">
+<div id="my-inner-box" class="shadow"></div>
+</div>
+</body>
+</html>	

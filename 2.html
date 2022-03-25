@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>Test</title>
+        <style type="text/css">
+            .navcon
+            {
+                border-bottom: 3px dotted red;
+                height: 1px;
+                position: relative;
+                margin-top: 300px;
+            }
+            .navcon::after
+            {
+                background: red none repeat scroll 0 0;
+                border-radius: 100%;
+                content: " ";
+                height: 50px;
+                left: -5px;
+                position: absolute;
+                top: -22px;
+                width: 50px;                
+            }
+            .navcon::before
+            {
+                background: red none repeat scroll 0 0;
+                border-radius: 100%;
+                content: " ";
+                height: 50px;
+                right: -5px;
+                position: absolute;
+                top: -22px;
+                width: 50px;                
+            }
+            .navcon ul
+            {
+                display: table;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                position: relative;
+                top: -25px;
+            }
+            .navcon ul li
+            {
+                display: table-cell;
+                text-align: center;
+            }
+            .marker-number
+            {
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
+                background-color: #00aeef;
+                border: 2px solid black;
+                display: inline-block;
+                text-align: center;
+                line-height: 50px;
+            }
+            .marker-text
+            {
+                display: block;
+            }
+        </style>
+    </head>
+<body>
+    <div class="navcon">
+        <ul>
+            <li><span class="marker-number">1</span> <span class="marker-text">Select Car</span></li>
+            <li><span class="marker-number">2</span> <span class="marker-text">Questions</span></li>
+            <li><span class="marker-number">3</span> <span class="marker-text">Problems</span></li>
+            <li><span class="marker-number">4</span> <span class="marker-text">Inspection</span></li>
+            <li><span class="marker-number">5</span> <span class="marker-text">Solution</span></li>
+        </ul>
+    </div>
+</body>
+</html>

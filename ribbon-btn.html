@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>Test</title>
+        <style type="text/css">
+/* containing element */
+#page
+{
+  width: 500px;
+  padding: 50px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid #333;
+}
+
+h2
+{
+  position: relative;
+  width: 50%;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 6px 20px 6px 70px;
+  margin: 30px 10px 10px 0;
+  color: #555;
+  background-color: #999;
+  text-shadow: 0px 1px 2px #bbb;
+  -webkit-box-shadow: 0px 2px 4px #888;
+  -moz-box-shadow: 0px 2px 4px #888;
+  box-shadow: 0px 2px 4px #888;
+}
+h2:after
+{
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 0px;
+  top: 100%;
+  border-width: 5px 10px;
+  border-style: solid;
+  border-color: #666 #666 transparent transparent;
+}
+h2:before
+{
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  right: -2px;
+  top: 0px;
+  border-color: transparent #fff transparent transparent;
+}        
+        </style>
+    </head>
+<body>
+<h2>My Heading</h2>
+</body>
+</html>

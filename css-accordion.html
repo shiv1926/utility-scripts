@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title></title>
+<style type="text/css" media="screen">
+#accordion { margin:100px auto; padding:0; width:500px; }    
+#accordion li { list-style:none; width:100%; }
+#accordion li label { padding:10px; display:block; color:#FFFFFF; background-color:#3498db; }    
+#accordion label + input[type='radio'] { display: none; }
+#accordion .content { display:none; padding:10px; background-color:#2ecc71; }
+#accordion label + input[type='radio']:checked + .content { display:block; }
+
+.cls_transition { -webkit-transition: all 0.5s; -moz-transition: all 0.5s; -ms-transition: all 0.5s; -o-transition: all 0.5s; transition: all 0.5s; }
+.btn_accordion {  }
+.btn_accordion .accordion_opener {  }
+.btn_accordion .accordion_body { height: 0; overflow: hidden; }
+.btn_accordion.active .accordion_body { height: auto; overflow: visible; }
+</style>
+<script src="jquery-3.1.1.min.js"></script>
+</head>
+<body>
+<ul id="accordion">
+<li>
+<label for="first">Fist Title</label>
+<input type="radio" name="accordion" id="first">
+<div class="content">Lorem ipsum dolor sit amet.</div>
+</li>
+<li>
+<label for="second">Second Title</label>
+<input type="radio" name="accordion" id="second">
+<div class="content">Lorem ipsum dolor sit amet consectetur.</div>
+</li>
+<li>
+<label for="third">Third Title</label>
+<input type="radio" name="accordion" id="third">
+<div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+</li>
+</ul>
+
+<input type="checkbox" name="chk" value="">chk1
+<br>
+<input type="checkbox" name="chk" value="">chk2
+<br>
+<input type="checkbox" name="chk" value="">chk3
+<br>
+<input type="checkbox" name="chk" value="">chk4
+<br>
+<input type="checkbox" name="chk" value="">chk5
+
+<div class="btn_accordion">
+    <div class="accordion_opener"><button>Opener 1</button></div>
+    <div class="accordion_body cls_transition"><div class="full_content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat voluptatibus, cumque necessitatibus aperiam quas laudantium perferendis vel voluptates nulla distinctio corrupti quibusdam libero omnis error quae ea sequi consequuntur, nam at, aspernatur ducimus et. A voluptates voluptatum animi dignissimos ex ratione expedita voluptas eos saepe quisquam, similique, iusto sit, vitae quos. Atque, porro maxime numquam harum, nam veniam sunt? Molestias veniam molestiae doloribus neque sequi adipisci commodi totam, dicta! Ducimus, animi doloremque excepturi magnam dolorum itaque fugiat quae optio officia sequi, error molestias iusto alias! Unde nulla molestias, repellendus animi ut optio adipisci libero! Inventore dolor fuga ipsam possimus quam!</div></div>
+</div>
+
+<div class="btn_accordion">
+    <div class="accordion_opener"><button>Opener 2</button></div>
+    <div class="accordion_body cls_transition"><div class="full_content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat voluptatibus, cumque necessitatibus aperiam quas laudantium perferendis vel voluptates nulla distinctio corrupti quibusdam libero omnis error quae ea sequi consequuntur, nam at, aspernatur ducimus et. A voluptates voluptatum animi dignissimos ex ratione expedita voluptas eos saepe quisquam, similique, iusto sit, vitae quos. Atque, porro maxime numquam harum, nam veniam sunt? Molestias veniam molestiae doloribus neque sequi adipisci commodi totam, dicta! Ducimus, animi doloremque excepturi magnam dolorum itaque fugiat quae optio officia sequi, error molestias iusto alias! Unde nulla molestias, repellendus animi ut optio adipisci libero! Inventore dolor fuga ipsam possimus quam!</div></div>
+</div>
+
+<div class="btn_accordion">
+    <div class="accordion_opener"><button>Opener 3</button></div>
+    <div class="accordion_body cls_transition"><div class="full_content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat voluptatibus, cumque necessitatibus aperiam quas laudantium perferendis vel voluptates nulla distinctio corrupti quibusdam libero omnis error quae ea sequi consequuntur, nam at, aspernatur ducimus et. A voluptates voluptatum animi dignissimos ex ratione expedita voluptas eos saepe quisquam, similique, iusto sit, vitae quos. Atque, porro maxime numquam harum, nam veniam sunt? Molestias veniam molestiae doloribus neque sequi adipisci commodi totam, dicta! Ducimus, animi doloremque excepturi magnam dolorum itaque fugiat quae optio officia sequi, error molestias iusto alias! Unde nulla molestias, repellendus animi ut optio adipisci libero! Inventore dolor fuga ipsam possimus quam!</div></div>
+</div>
+
+<div class="btn_accordion">
+    <div class="accordion_opener"><button>Opener 4</button></div>
+    <div class="accordion_body cls_transition"><div class="full_content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat voluptatibus, cumque necessitatibus aperiam quas laudantium perferendis vel voluptates nulla distinctio corrupti quibusdam libero omnis error quae ea sequi consequuntur, nam at, aspernatur ducimus et. A voluptates voluptatum animi dignissimos ex ratione expedita voluptas eos saepe quisquam, similique, iusto sit, vitae quos. Atque, porro maxime numquam harum, nam veniam sunt? Molestias veniam molestiae doloribus neque sequi adipisci commodi totam, dicta! Ducimus, animi doloremque excepturi magnam dolorum itaque fugiat quae optio officia sequi, error molestias iusto alias! Unde nulla molestias, repellendus animi ut optio adipisci libero! Inventore dolor fuga ipsam possimus quam!</div></div>
+</div>
+
+<div class="btn_accordion">
+    <div class="accordion_opener"><button>Opener 5</button></div>
+    <div class="accordion_body cls_transition"><div class="full_content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat voluptatibus, cumque necessitatibus aperiam quas laudantium perferendis vel voluptates nulla distinctio corrupti quibusdam libero omnis error quae ea sequi consequuntur, nam at, aspernatur ducimus et. A voluptates voluptatum animi dignissimos ex ratione expedita voluptas eos saepe quisquam, similique, iusto sit, vitae quos. Atque, porro maxime numquam harum, nam veniam sunt? Molestias veniam molestiae doloribus neque sequi adipisci commodi totam, dicta! Ducimus, animi doloremque excepturi magnam dolorum itaque fugiat quae optio officia sequi, error molestias iusto alias! Unde nulla molestias, repellendus animi ut optio adipisci libero! Inventore dolor fuga ipsam possimus quam!</div></div>
+</div>
+
+</body>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".accordion_opener").click(function(){
+            parent = $(this).parent();
+            getheight = parent.find('.full_content').height();
+            if(parent.hasClass('active')) 
+            {
+
+            } 
+            else 
+            {
+                parent.siblings().removeClass('active');
+            }
+            parent.toggleClass('active');
+        });
+    });
+</script>
+
+</html>

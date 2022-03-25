@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<style>
+a {
+	text-decoration: none;
+}
+
+.color-4 {
+	background: #0e83cd;
+}
+
+nav a {
+	position: relative;
+	display: inline-block;
+	margin: 15px 25px;
+	outline: none;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 400;
+	text-shadow: 0 0 1px rgba(255,255,255,0.3);
+	font-size: 1.35em;
+}
+
+nav a:hover,
+nav a:focus {
+	outline: none;
+}
+
+/* Effect 11: text fill based on Lea Verou's animation http://dabblet.com/gist/6046779 */
+.cl-effect-11 a {
+	padding: 10px 0;
+	color: #0972b4;
+} 
+
+.cl-effect-11 a::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	padding: 10px 0;
+	max-width: 0;
+	border-bottom: 2px solid #fff;
+	color: #fff;
+	content: attr(data-hover);
+	-webkit-transition: max-width 0.5s;
+	-moz-transition: max-width 0.5s;
+	transition: max-width 0.5s;
+}
+
+.cl-effect-11 a:hover::before,
+.cl-effect-11 a:focus::before {
+	max-width: 100%;
+}	
+</style>
+</head>
+<body>
+<section class="color-4">
+<nav class="cl-effect-11" id="cl-effect-11">
+<a href="#cl-effect-11" data-hover="Desultory">Desultory</a>
+<a href="#cl-effect-11" data-hover="Sumptuous">Sumptuous</a>
+<a href="#cl-effect-11" data-hover="Scintilla">Scintilla</a>
+<a href="#cl-effect-11" data-hover="Propinquity">Propinquity</a>
+<a href="#cl-effect-11" data-hover="Harbinger">Harbinger</a>
+</nav>
+</section>
+</body>
+</html>

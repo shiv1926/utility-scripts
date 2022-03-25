@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<style type="text/css" media="screen">
+.arrow {
+position: relative;
+font-size: 13px;
+max-width: 100px;
+background: #D94F1A;
+height: 40px;
+line-height: 40px;
+margin-bottom: 30px;
+text-align: center;
+color: white;
+box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.2);
+visibility: hidden;
+opacity: 0;
+transition: visibility 0s, opacity 0.3s ease-in-out;
+}
+
+.arrow.arrow-small {
+width: 40px;
+height: 30px;
+}
+.arrow.arrow-small.arrow-top {
+border-radius: 0 0 5px 5px;
+}
+.arrow.arrow-small.arrow-bottom {
+border-radius: 5px 5px 0 0;
+}
+
+.arrow.active {
+visibility: visible;
+opacity: 1;
+}
+
+.arrow.active.animate-left-to-right {
+animation-name: move-left-to-right;
+animation-duration: 1s;
+animation-delay: 0.6s;
+animation-iteration-count: infinite;
+animation-direction: alternative;
+}
+
+.arrow.active.animate-right-to-left {
+animation-name: move-right-to-left;
+animation-duration: 1s;
+animation-delay: 0.6s;
+animation-iteration-count: infinite;
+animation-direction: alternative;
+}
+
+.arrow.active.animate-bottom-to-top {
+animation-name: move-bottom-to-top;
+animation-duration: 1s;
+animation-delay: 0.6s;
+animation-iteration-count: infinite;
+animation-direction: alternative;
+}
+
+.arrow.active.animate-top-to-bottom {
+animation-name: move-top-to-bottom;
+animation-duration: 1s;
+animation-delay: 0.6s;
+animation-iteration-count: infinite;
+animation-direction: alternative;
+}
+
+@keyframes move-left-to-right {
+0% {
+transform: translateX(5%);
+box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.2);
+}
+50% {
+transform: translateX(15%);
+box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.4);
+}
+100% {
+transform: translateX(5%);
+box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.2);
+}
+}
+
+@keyframes move-right-to-left {
+	0% { transform: translateX(-5%); box-shadow: -3px 5px 5px rgba(0, 0, 0, 0.2); }
+	50% { transform: translateX(-15%); box-shadow: -3px 5px 5px rgba(0, 0, 0, 0.4); }
+	100% { transform: translateX(-5%); box-shadow: -3px 5px 5px rgba(0, 0, 0, 0.2); }
+}
+
+@keyframes move-bottom-to-top {
+0% {
+transform: translateY(-5%);
+box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.4);
+}
+50% {
+transform: translateY(-15%);
+box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.2);
+}
+100% {
+transform: translateY(-5%);
+box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.4);
+}
+}
+
+@keyframes move-top-to-bottom {
+0% {
+transform: translateY(5%);
+box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.2);
+}
+50% {
+transform: translateY(15%);
+box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.4);
+}
+100% {
+transform: translateY(5%);
+box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.2);
+}
+}
+
+
+/*top arrow*/
+
+.arrow-top,
+.arrow-bottom {
+border-radius: 5px;
+}
+
+.arrow-top:before {
+position: absolute;
+top: -10px;
+left: 50%;
+margin-left: -10px;
+content: "";
+display: block;
+border-left: 10px solid transparent;
+border-right: 10px solid transparent;
+border-bottom: 10px solid #D94F1A;
+}
+
+.arrow-small.arrow-top:before {
+top: -20px;
+margin-left: -20px;
+border-left: 20px solid transparent;
+border-right: 20px solid transparent;
+border-bottom: 20px solid #D94F1A;
+border-radius: 0;
+}
+
+/*bottom arrow*/
+
+.arrow-bottom:after {
+position: absolute;
+bottom: -10px;
+left: 50%;
+margin-left: -10px;
+content: "";
+display: block;
+border-left: 10px solid transparent;
+border-right: 10px solid transparent;
+border-top: 10px solid #D94F1A;
+}
+
+.arrow-small.arrow-bottom:after {
+bottom: -20px;
+margin-left: -20px;
+border-left: 20px solid transparent;
+border-right: 20px solid transparent;
+border-top: 20px solid #D94F1A;
+border-radius: 0;
+}
+
+/*right arrow*/
+
+.arrow-right {
+border-radius: 5px 0px 0 5px;
+}
+
+.arrow-right:after {
+content: "";
+position: absolute;
+right: -20px;
+top: 0;
+border-top: 20px solid transparent;
+border-bottom: 20px solid transparent;
+border-left: 20px solid #D94F1A;
+}
+
+
+/*left arrow*/
+
+.arrow-left {
+border-radius: 0 5px 5px 0;
+}
+
+.arrow-left:before {
+content: "";
+position: absolute;
+left: -20px;
+top: 0;
+border-top: 20px solid transparent;
+border-bottom: 20px solid transparent;
+border-right: 20px solid #D94F1A;
+}
+
+	</style>
+</head>
+<body>
+<div id="app">
+	<div href="#" class="arrow active arrow-top animate-top-to-bottom">Message</div>
+	<div href="#" class="arrow active arrow-bottom animate-bottom-to-top">Message</div>
+	<div href="#" class="arrow active arrow-right animate-right-to-left">Message</div>
+	<div href="#" class="arrow active arrow-left animate-left-to-right">Message</div>
+	<div href="#" class="arrow active arrow-small arrow-top animate-top-to-bottom"></div>
+	<div href="#" class="arrow active arrow-small arrow-bottom animate-bottom-to-top"></div>
+</div>
+</body>
+</html>

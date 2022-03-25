@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            >.tab {
+                overflow: hidden;
+                border: 2px solid gray;
+                background-color: #FFE4C4;
+            }
+
+            .tab button {
+                background-color: inherit;
+                float: left;
+                cursor: pointer;
+                padding: 14px 16px;
+                font-size: 15px;
+            }
+
+            .tab button:hover {
+                background-color: gray;
+            }
+
+            .tab button.active {
+                background-color: #ccc;
+            }
+
+            .demo2 {
+                display: none;
+                padding: 3px 12px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <h2>Examination</h2>
+        <p>Following is the exam information:</p>
+        <div class="tab">
+            <button class="demo" onclick="infofunc(event, 'dates')">Exam Dates</button>
+            <button class="demo" onclick="infofunc(event, 'centre')">Exam Centre</button>
+        </div>
+        <div id="dates" class="demo2">
+            <h3>Dates</h3>
+            <p>Exam date will be announced on 25th March.</p>
+        </div>
+        <div id="centre" class="demo2">
+            <h3>Centre</h3>
+            <p>Exam Centre will be announced on 30th March.</p>
+        </div>
+        <script>
+            function infofunc(e, info) {
+                var i, content, links;
+                content = document.getElementsByClassName("demo2");
+                for (i = 0; i < content.length; i++) {
+                    content[i].style.display = "none";
+                }
+                links = document.getElementsByClassName("demo");
+                for (i = 0; i < links.length; i++) {
+                    links[i].className = links[i].className.replace(" active", "");
+                }
+                document.getElementById(info).style.display = "block";
+                e.currentTarget.className += " active";
+            }
+        </script>
+    </body>
+
+</html>

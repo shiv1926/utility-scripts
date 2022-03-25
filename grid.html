@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Test</title>
+        <style type="text/css">
+        .container { position: relative; }
+        .parent { width: 1800px; height: 100px; margin: 0 auto; }
+        .parent .child { float: left; }
+        .clearfix { clear: both; }
+        .parent .first { background-color: yellow; width: 60%; height: 100%; }
+        .parent .second { background-color: blue; width: 40%;  height: 100%; }
+
+        .inner_parent { width: 800px; height: 100%; margin: 0 auto; }
+        .inner_parent .first { background-color: red; width: 60%; height: 100%; }
+        .inner_parent .second { background-color: green; width: 40%;  height: 100%; }
+        .inner_parent .child { float: left; }
+        </style>
+    </head>
+<body>
+  <div class="container">
+    <div class="parent">
+        <div class="child first"></div>
+        <div class="child second"></div>
+        <div class="clearfix"></div>
+        <div class="inner_parent">
+          <div class="child first"></div>
+          <div class="child second"></div>
+        </div>
+    </div>
+  </div>
+</body>
+</html>

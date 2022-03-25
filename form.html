@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+<script type="text/javascript" language="javascript">
+function validation()
+{
+	var flag1=0;	
+	var txt=document.getElementsByName("chk[]");
+	var flag=true;
+	var msg="";
+    var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+    if(document.getElementById("fname").value=="")
+    {
+          flag=false;
+          msg+="Your select your first name. \n ";
+          document.getElementById("fname").style.backgroundColor="#FFE4E1";
+          document.getElementById("fname").focus();
+    }
+    if(reg.test(document.getElementById("emailid").value)==false)
+    {
+          flag=false;
+          msg+="Your Email Id does not seems valid \n ";
+          document.getElementById("emailid").focus();
+          document.getElementById("emailid").style.backgroundColor="#FFE4E1";
+    }
+    if(document.getElementById("pwd").value=="")
+    {
+          flag=false;
+          msg+="Your insert your password. \n ";
+          document.getElementById("pwd").focus();
+          document.getElementById("pwd").style.backgroundColor="#FFE4E1";
+    }
+    if(document.getElementById("adr").value=="")
+    {
+          flag=false;
+          msg+="Your insert your address. \n ";
+          document.getElementById("adr").focus();
+          document.getElementById("adr").style.backgroundColor="#FFE4E1";
+    }
+   	if(document.getElementById("city").value==-1)
+    {
+          flag=false;
+          msg+="Your insert your city. \n ";
+          document.getElementById("city").focus();
+          document.getElementById("city").style.backgroundColor="#FFE4E1";
+    }
+	for(i=0; i<txt.length; i++)
+	{
+		if(txt[i].checked==true)
+		{
+			flag1=flag1+1;
+          document.getElementById("row").style.backgroundColor="#FFE4E1";
+		}
+	}
+	//alert(flag);
+	if(flag1==0) {
+          flag=false;
+          msg+="Please select ateast one checkbox. \n ";
+	}
+	if(flag==true)
+	return true;
+	else
+	alert(msg);
+	return false;
+}
+</script>
+</head>
+<body>
+<form id="form" action="" method="post" enctype="multipart/form-data">
+<table cellpadding="1" width="80%">
+<tr>
+	<td>Name:</td>
+	<td><input type="text" name="uname" id="fname" value="" /></td>
+</tr>
+<tr>
+	<td>Email:</td>
+	<td><input type="text" name="email" id="emailid" value="" /></td>
+</tr>
+<tr>
+	<td>Password:</td>
+	<td><input type="password" name="pass" id="pwd" value="" /></td>
+</tr>
+<tr>
+	<td>Address:</td>
+	<td><textarea name="address" id="adr"></textarea></td>
+</tr>
+<tr>
+	<td>City:</td>
+	<td>
+	<select name="city" id="city" multiple="true" size="3">
+	<option value="">Select</option>
+	<option value="city1">city1</option>
+	<option value="city2">city2</option>
+	<option value="city3">city3</option>
+	<option value="city4">city4</option>
+	<option value="city5">city5</option>
+	<option value="city6">city6</option>
+	<option value="city7">city7</option>
+	<option value="city8">city8</option>
+	<option value="city9">city9</option>
+	<option value="city10">city10</option>
+	</select>
+	</td>
+</tr>
+<tr>
+	<td>education:</td>
+	<td>
+	<select name="education" id="ideducation">
+	<option value="">Select</option>
+	<option value="city1">city1</option>
+	<option value="city2">city2</option>
+	<option value="city3">city3</option>
+	<option value="city4">city4</option>
+	<option value="city5">city5</option>
+	</select>
+	</td>
+</tr>
+<tr id="row">
+	<td>Residantial:</td>
+	<td>
+		<input type="checkbox" name="chk[]" value="1" />1
+		<input type="checkbox" name="chk[]" value="2" />2
+		<input type="checkbox" name="chk[]" value="3" />3
+		<input type="checkbox" name="chk[]" value="4" />4
+		<input type="checkbox" name="chk[]" value="5" />5
+		<input type="checkbox" name="chk[]" value="6" />6
+		<input type="checkbox" name="chk[]" value="7" />7
+		<input type="checkbox" name="chk[]" value="8" />8
+		<input type="checkbox" name="chk[]" value="9" />9
+		<input type="checkbox" name="chk[]" value="10" />10
+	</td>
+</tr>
+<tr>
+	<td>Gender : </td>
+	<td>
+		<input type="radio" name="gender" checked="checked" value="male">Male
+		<input type="radio" name="gender" value="female">female
+	</td>
+</tr>
+<tr><td colspan="2"><input type="submit" value="Submit" name="submit" onclick="return validation();" /></td></tr>
+
+<tr>
+	<td>Address:</td>
+	<td><textarea name="address" id="adr" onfocus="if(this.value=='Email')this.value='';" onblur="if(this.value=='')this.value='Email';">Email</textarea></td>
+</tr>
+
+
+
+</table>
+</form>
+<input name="email" id="emailid" type="text" value="Email" onfocus="if(this.value=='Email')this.value='';" onblur="if(this.value=='')this.value='Email';"  size="35" >
+<input type="password" name="password" id="pwd" value="Password" onfocus="if(this.value=='Password')this.value='';" onblur="if(this.value=='')this.value='Password';" size="35" >
+</body>
+</html>
+
+<input type="text" onblur="if(this.value=='')this.value='first-name'" onfocus="if(this.value=='first-name')this.value=''" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" value="first-name" name="text-621">
+
+
+
+<script>
+$(document).ready(function(){
+
+$.validator.addMethod('AgeGrtrEighteen', function(value) {
+return parseFloat(value) < 20;
+}, 'Age has to be greater than 18');
+
+$('#frmProduct').validate({
+	rules: {
+	txtbuynow: {
+		AgeGrtrEighteen: true,
+	}
+	}
+	
+	messages: {
+	   txtbuynow: {
+			required : 'Your customized message',
+		}
+	}
+
+});
+	
+});
+</script>

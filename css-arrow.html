@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+  <meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=no">
+	<style type="text/css">
+  .arrow { width: 100px; position: relative; height: 2px; background-color: red; }
+  .leftarrow:after { 
+    position: absolute;
+    content: "";
+    left: -3px;
+    top: -8px;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 18px solid red;
+    border-left: 0;
+  }
+  .rightarrow:after { 
+    position: absolute;
+    content: "";
+    right: -3px;
+    top: -8px;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 18px solid red;
+    border-right: 0;
+  }
+	</style>
+</head>
+<body>
+<br><br>
+<div class="leftarrow arrow"></div>
+<br><br>
+<div class="rightarrow arrow"></div>
+</body>
+</html>

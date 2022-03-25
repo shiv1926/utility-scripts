@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>CSS: different dividing lines</title>
+<style type="text/css" media="screen">
+h1:before {
+	content: "..........................";
+	color: #79acdd;
+	font-size: 18px;
+	letter-spacing: 2px;
+	display:block;
+	width: 400px;
+	overflow: hidden;
+	height: 50px;
+}	
+
+.stitched {
+   padding: 20px;
+   margin: 10px;
+   background: #ff0030;
+   color: #fff;
+   font-size: 21px;
+   font-weight: bold;
+   line-height: 1.3em;
+   border: 2px dashed #fff;
+   border-radius: 50%;
+   height: 50px;
+   width: 50px;
+   box-shadow: 0 0 0 4px #ff0030, 2px 1px 6px 4px rgba(10, 10, 0, 0.5);
+   text-shadow: -1px -1px #aa3030;
+   font-weight: normal;
+}
+
+
+</style>
+</head>
+<body>
+<h1>test</h1>
+ 
+<p>section 1</p>
+<hr style="width:300px; background-color:yellow; height:50px;  border:2px dashed blue;">
+<p>section 1</p>
+ 
+<p>section 2</p>
+<hr style="width:300px; background-color:green; height:50px;  border:5px dashed red;">
+<p>section 2</p>
+ 
+<p>section 3</p>
+<hr style="width:300px; background-color:mediumslateblue; height:50px; border:10px dashed darkturquoise;">
+<p>section 3</p>
+
+<div class="stitched">
+Stitched
+</div>
+
+</body>
+</html>

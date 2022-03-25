@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<style type="text/css">
+		#shiva { width: 100px; height: 100px; background: red; -moz-border-radius: 50px; -webkit-border-radius: 50px; border-radius: 50px;
+		float:left; margin:5px; }
+		.count { line-height: 100px; color:white; margin-left:30px; font-size:25px; }
+		#talkbubble {  width: 120px; height: 80px; background: red; position: relative; -moz-border-radius: 10px; -webkit-border-radius: 10px;
+		border-radius: 10px; float:left; margin:20px; }
+		#talkbubble:before { content:""; position: absolute; right: 100%; top: 26px; width: 0; height: 0; border-top: 13px solid transparent;
+		border-right: 26px solid red; border-bottom: 13px solid transparent; }
+		.linker { font-size : 20px; font-color: black; }
+	</style>
+</head>
+<body>
+<div id="shiva"><span class="count">200</span></div>
+<div id="shiva"><span class="count">1000</span></div>
+<div id="shiva"><span class="count">853</span></div>
+<div id="shiva"><span class="count">154</span></div>
+<div id="shiva"><span class="count">10</span></div>
+<div id="shiva"><span class="count">87</span></div>
+<div style="clear:both"></div>
+<div id="talkbubble"><span class="count">1421</span></div>
+<div id="talkbubble"><span class="count">145</span></div>
+<div id="talkbubble"><span class="count">78</span></div>
+<br />
+<br />
+<a class="linker" href="http://www.i-visionblog.com/2014/11/jquery-animated-number-counter-from-zero-to-value-jquery-animation.html"  target="_blank">visit Tutorial in Blog</a>
+<br />
+</body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
+<script>
+    jQuery(document).ready(function() {
+		$('.count').each(function () {
+		    $(this).prop('Counter',0).animate({
+		        Counter: $(this).text()
+		    }, {
+		        duration: 4000,
+		        easing: 'swing',
+		        step: function (now) {
+		            $(this).text(Math.ceil(now));
+		        }
+		    });
+		});
+	});
+</script>
+
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            .ideacom_animate {
+                animation-duration: 0.4s;
+                animation-fill-mode: both;
+            }
+
+            @keyframes slideIn {
+                0% {
+                    transform: translateY(-100px);
+                    opacity: 0;
+                }
+
+                100% {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+
+            .slideIn {
+                animation-name: slideIn;
+            }
+
+            .ideacom_modal {
+                position: fixed;
+                z-index: 1;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                overflow: auto;
+                display: none;
+            }
+
+            .ideacom_modal:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                background-color: #000;
+                z-index: 1;
+                opacity: 0;
+            }
+
+            .ideacom_modal.show {
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+            }
+
+            .ideacom_modal.show:before {
+                opacity: 0.5;
+            }
+
+            .ideacom_modal .ideacom_modal_content {
+                position: relative;
+                background-color: #fefefe;
+                margin: auto;
+                padding: 0 0 0 0;
+                margin: 100px 15px 0 15px;
+                border: 1px solid #888;
+                width: 100%;
+                max-width: 700px;
+                z-index: 2;
+            }
+
+            .ideacom_modal .close {
+                color: #aaaaaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+            }
+
+            .ideacom_modal .close:hover,
+            .ideacom_modal .close:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+            .close_popup_quote {
+                position: absolute;
+                top: 0;
+                right: 0;
+                border: 0;
+                background-color: #0C71C3;
+                font-size: 30px;
+                line-height: 1;
+                padding: 5px 10px 5px 10px;
+                color: #fff;
+                cursor: pointer;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <button type="button" onClick="open_modal('myideacom_modal');">Open ideacome_modal</button>
+        <div id="myideacom_modal" class="ideacom_modal">
+            <div class="ideacom_modal_content slideIn ideacom_animate">
+                <button type="button" onClick="close_modal('myideacom_modal');">&times;</button>
+                <p>Some text in the ideacom_modal.</p>
+                [formidable id=16]
+            </div>
+        </div>
+        <script type="text/javascript">
+
+            function open_modal(mid) {
+                document.getElementById(mid).classList.add("show");
+            }
+
+            function close_modal(mid) {
+                document.getElementById(mid).classList.remove("show");
+            }
+        </script>
+    </body>
+
+</html>

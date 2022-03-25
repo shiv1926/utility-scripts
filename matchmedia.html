@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Match Media</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+</head>
+<style type="text/css">
+    .text { background: red; color: #fff; padding: 20px; display: inline-block; }
+    @media (max-width: 767px)
+    {
+        .text { background: yellow; color: #000; }
+    }
+    @media (min-width: 768px) and (max-width: 991px)
+    {
+        .text { background: green; color: #000; }
+    }
+    @media (min-width: 992px) and (max-width: 1199px)
+    {
+        .text { background: pink; color: #000; }
+    }
+</style>
+<body>
+    <div class="text">sample text</div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            if (window.matchMedia("(max-width: 767px)").matches) {
+                console.log('less than 767');
+            } else if (window.matchMedia("(min-width: 768px) and (max-width: 991px)").matches) {
+                console.log('between 768 and 991');
+            } else if (window.matchMedia("(min-width: 992px) and (max-width: 1199px)").matches) {
+                console.log('between 992 and 1199');
+            } else {
+                console.log('desktop');
+            }
+        });
+    </script>
+</body>
+</html>

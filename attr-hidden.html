@@ -1,0 +1,30 @@
+<html>
+    <head>
+      <script src="jquery-3.1.1.min.js"></script>
+    </head>
+<body>
+  <div autocapitalize>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum placeat excepturi ut. Soluta porro voluptas ipsum, magnam, illo tempora facilis sapiente animi nam dolore harum voluptates repellat iusto. Cumque cum vitae quo et, nisi magni necessitatibus dolorum iusto! Harum, dicta quia debitis voluptates illum similique at suscipit modi. Cupiditate, eum.</div>
+
+  <div id="showme" hidden >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum placeat excepturi ut. Soluta porro voluptas ipsum, magnam, illo tempora facilis sapiente animi nam dolore harum voluptates repellat iusto. Cumque cum vitae quo et, nisi magni necessitatibus dolorum iusto! Harum, dicta quia debitis voluptates illum similique at suscipit modi. Cupiditate, eum.</div>
+
+
+  <p contenteditable spellcheck="true">This exampull will be checkd fur spellung when you try to edit it.</p>
+
+<p contenteditable spellcheck="false">This exampull will nut be checkd fur spellung when you try to edit it.</p>
+
+
+
+  <a href="javascript:void(0);" id="showtext">show</a>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $("#showtext").click(function(){
+        $("#showme").show();
+      })
+    });
+  </script>
+
+  <b></b>
+  <strong></strong>
+</body>
+</html>

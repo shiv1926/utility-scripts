@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>CSS: different dividing lines</title>
+<style type="text/css" media="screen">
+.item a.new-label span{
+  position: relative;
+  content: 'NEW'
+}
+.item:hover a.new-label span{
+  display: none;
+}
+.item:hover a.new-label:after{
+  content: 'ADD';
+}
+</style>
+</head>
+<body>
+<div class="item">
+    <a href="javascript:void(0);" class="label new-label"><span>my name</span></a>
+</div>
+</body>
+</html>

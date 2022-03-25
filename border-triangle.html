@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>CSS: different dividing lines</title>
+<style type="text/css" media="screen">
+.box { height: 0; width: 0; background: red; border-top: 25px solid black; border-bottom: 25px solid black; border-left: 25px solid yellow; 
+border-right: 0; }
+.arrow { position: absolute; display: block; content: ""; border-color: transparent; border-style: solid; top: 0; border-width: 0 .5rem .5rem .5rem; border-bottom-color: red; }
+.one_fourth { display: inline-block; border-top: 100px solid black; border-bottom: 100px solid red; border-right: 100px solid blue; border-left: 100px solid green; }
+
+.arrow { border: solid black; border-width: 0 3px 3px 0; display: inline-block; padding: 3px; }
+</style>
+</head>
+<body>
+<div class="box"></div>
+<div class="arrow"></div>
+<div class="one_fourth"></div>
+<div class="one_fourth_gradient"></div>
+
+
+<div class="arrow"></div>
+
+</body>
+</html>

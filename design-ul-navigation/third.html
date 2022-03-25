@@ -1,0 +1,50 @@
+<html>
+    <head>
+<style type="text/css">
+ol {
+    position:relative;
+    counter-reset:li;
+    margin-left:0;
+    padding-left:0;
+}
+ol li{
+    margin-left:25px!important;
+}
+ol > li {
+    list-style:none;
+    padding-bottom: 20px;
+}
+ol > li:before {
+    position: absolute;
+    left:-10px;
+    content:counter(li);
+    counter-increment:li;
+    -webkit-border-radius: 999px;
+    -moz-border-radius: 999px;
+    border-radius: 999px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    background: #649BA1;
+    border: 2px solid #649BA1;
+    color: #fff;
+    text-align: center;
+    font-weight:bold;
+    padding: 1px;
+}
+ol.reset {
+    counter-reset:item 3;
+}
+</style>
+    </head>
+    <body>
+<ol>
+    <li><a href="">List item</a></li>
+    <li><a href="">List item</a></li>
+    <li><a href="">List item</a></li>
+    <li><a href="">List item</a></li>
+    <li><a href="">List item</a></li>
+</ol>
+    </body>
+</html>

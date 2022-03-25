@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>Test</title>
+        <style type="text/css">
+ul {
+  text-align: justify;
+  position: relative;
+  overflow: hidden;
+}
+ul:before, .active:after {
+  content: '';
+  width: 100%;
+  border: 1px dotted #000;
+  position: absolute;
+  top: 1em;
+  margin-top: -6px;
+  z-index: -1;
+}
+.active:after {
+  border-color: #b7b7b7;
+}
+ul:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+li {
+  width: 1.5em;
+  height: 1.5em;
+  text-align: center;
+  line-height: 1.7em;
+  border-radius: 50%;
+  background: #21a2d1;
+  margin: 0 1em;
+  display: inline-block;
+  color: white;
+  font-size: 1em;
+}
+
+.marker-number {
+  font-size: 14px;
+}
+
+li.active {
+  background: #04497b;
+}
+
+.active ~ li {
+  background: #b7b7b7;
+}
+
+span.marker-text {
+  color: #7d7d7d;
+  font-size: 12px;
+  line-height: 16px;
+  width: 70px;
+  display: block;
+  margin-left: -21px;
+  margin-top: 2px;
+  font-style: italic;
+  font-family: Arial;
+}            
+        </style>
+    </head>
+<body>
+    <ul>
+    <li><span class="marker-number">1</span> <span class="marker-text">Select Car</span></li>
+    <li><span class="marker-number">2</span> <span class="marker-text">Questions</span></li>
+    <li><span class="marker-number">3</span> <span class="marker-text">Problems</span></li>
+    <li class="active"><span class="marker-number">4</span> <span class="marker-text">Inspection</span></li>
+    <li><span class="marker-number">5</span> <span class="marker-text">Solution</span></li>
+    </ul>
+</body>
+</html>

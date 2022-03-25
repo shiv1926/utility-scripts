@@ -1,0 +1,68 @@
+<html>
+
+    <head>
+        <style>
+            .w3-modal {
+                z-index: 3;
+                display: none;
+                padding-top: 100px;
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgb(0, 0, 0);
+                background-color: rgba(0, 0, 0, 0.4);
+            }
+
+            .w3-animate-top {
+                position: relative;
+                animation: animatetop 0.4s;
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+    </body>
+    <script>
+        function open_modal() {
+            var modal = document.getElementById("myModal").style.display = "block";
+        }
+
+        function close_modal() {
+            var modal = document.getElementById("myModal").style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            var modal = document.getElementById("myModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+    </script>
+
+</html>
+
+
+<div id="myModal" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+        <header class="w3-container w3-red w3-display-container">
+            <span class="w3-button w3-xlarge w3-display-topright w3-hover-red w3-hover-opacity">×</span>
+            <h2>Modal Header</h2>
+        </header>
+        <div class="w3-container">
+            <p>Hello World!</p>
+            <p>Modals are awesome!</p>
+        </div>
+        <footer class="w3-container w3-red">
+            <p>Modal Footer</p>
+        </footer>
+    </div>
+</div>
+
+
+<button onclick="open_modal();">Open Modal</button>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<style type="text/css">
+		img { max-width: 100%; height: auto; display: block; }
+		.container { max-width: 800px; margin: 0 auto; }
+		/*.row { display: flex; }
+		.col { flex: 0 0 100%; max-width: 100%; }*/
+		.row { position: relative; width: 100%; }
+		.col { position: absolute; width: 60%; }
+		.col.before { left: 0; transform: skew(-15deg, 0deg); }
+		.col.before img { transform: skew(15deg, 0deg); }
+		.col.after { right: 0; }
+		.col.after img {  }
+		.container .before {  }
+		.container .after {  }
+	</style>
+	<!-- <link rel='stylesheet' href='http://shiv-pc/skywalker/skywalker/cdn/themes/skywalker/css/style.css?ver=1.0.1' type='text/css' /> -->
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col before"><img src="images/before-pic.jpg"></div>
+			<div class="col after"><img src="images/after-pic.jpg"></div>
+		</div>
+	</div>
+</body>
+</html>

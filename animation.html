@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Animation Practive</title>
+	<link rel="stylesheet" href="">
+	<style type="text/css">
+	.box { height: 100px; width: 100px; background-color: red; display: inline-block; animation-name: first_animation; animation-duration: 2s; animation-iteration-count: infinite; animation-delay: 5s; animation-direction: alternate; }
+	@keyframes first_animation
+	{
+		0% { background-color: yellow; }
+		50% { background-color: black; }
+		100% { background-color: green; border-radius: 50%; }
+	}
+	.cloud { background: #EBF5FC; border-radius: 200px; box-shadow: 0 1px 1px rgba(0,0,0,0.1); height: 39px; position: absolute; right: 0%; width: 102px; }
+	.cloud:before, .cloud:after { background: #EBF5FC; border-radius: 100px; content: ''; height: 45px; left: 10px; position: absolute; top: -10px; width: 60px; -webkit-transform: rotate(30deg); -moz-transform: rotate(30deg); transform: rotate(30deg); }
+	.cloud:after { content:""; height: 60px; left: auto; right: 12px; top: -24px; width: 60px; }
+	.rect_box { height: 200px; width: 800px; background-color: yellow; position: relative;  overflow: hidden; }
+	.ball { height: 50px; width: 50px; background-color: red; border-radius: 50%; position: relative;
+		animation-name: moving_ball;
+		animation-duration: 5s;
+		animation-direction: reverse;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+	}
+	@keyframes moving_ball
+	{
+		0% { left: -60px; }
+		100% { left: calc(100% + 10px); }
+	}
+	.bouncein { font-size: 30px; animation-name: bouncein; }
+	@keyframes bouncein
+	{
+		0% {  }
+	}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+	<hr>
+	<div class="cloud"></div>
+	<hr>
+	<div class="rect_box">
+		<div class="ball"></div>
+	</div>
+	<div class="bouncein">
+		bouncein text
+	</div>
+</body>
+</html>
