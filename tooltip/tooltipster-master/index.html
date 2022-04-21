@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="tooltipster.bundle.min.css" />
+    <script type="text/javascript" src="dist/js/tooltipster.bundle.min.js"></script>
+</head>
+<body>
+	<span class="tooltip" data-tooltip-content="#tooltip_content">hover over it!</span>
+	<div class="tooltip_templates">
+	    <span id="tooltip_content">
+	        lkj sldfjds fsd;fkjfds ;lkj 
+	    </span>
+	</div>	
+</body>
+<script type="text/javascript">
+	$(document).ready(function($) {
+		$('.tooltip').tooltipster({
+		    contentCloning: true,
+		    contentAsHTML: true,
+		});
+	});
+</script>
+</html>
