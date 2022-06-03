@@ -5,11 +5,13 @@
     <script src="datetimepicker_css_customized.js"></script>
     <style type="text/css">
         .example { display: flex; margin: 50px; }
+        div#demo1 { background-color: wheat; color: #000; width: 200px; }
     </style>
 </head>
 <body>
     <div class="example">
         <input type="Text" id="demo1" maxlength="25" size="25"/>
+        <!-- <div id="demo1"></div> -->
         <img src="images2/cal.gif" onclick="showdatetime();"/>
     </div>
 </body>
@@ -17,6 +19,6 @@
 <script>
     function showdatetime()
     {
-        NewCssCal('demo1','','arrow',false,'',false,'future');
+        NewCssCal('demo1','','arrow',true,'12',false,'future');
     }
 </script>
